@@ -20,18 +20,18 @@ public class RegistartionActivity extends AppCompatActivity {
         TextView password2 = findViewById(R.id.regPass2);
         TextView email = findViewById(R.id.email);
         MaterialButton registerButton = findViewById(R.id.register);
-//        registerButton.setOnClickListener(new View.OnClickListener(){
+        registerButton.setOnClickListener(new View.OnClickListener(){
 
-    //        @Override
-      //      public void onClick(View view) {
-     //           if (password1.getText().toString().equals(password2.getText().toString()) && !TextUtils.isEmpty(email.getText().toString()) &&  !TextUtils.isEmpty(username.getText().toString())) {
-       //             Toast.makeText(RegistartionActivity.this, "ACCOUNT CREATION SUCCESSFUL", Toast.LENGTH_SHORT).show();
-         //           Intent intent = new Intent(RegistartionActivity.this,calendarView.class);
-           //         startActivity(intent);
-             //   } else
-               //     Toast.makeText(RegistartionActivity.this, "ALL FIELDS REQUIRED", Toast.LENGTH_SHORT).show();
+            @Override
+            public void onClick(View view) {
+               if (password1.getText().toString().equals(password2.getText().toString()) && !TextUtils.isEmpty(email.getText().toString()) &&  !TextUtils.isEmpty(username.getText().toString())) {
+                   Toast.makeText(RegistartionActivity.this, "ACCOUNT CREATION SUCCESSFUL", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(RegistartionActivity.this,calendarView.class);
+                    startActivity(intent);
+                } else
+                    Toast.makeText(RegistartionActivity.this, "ALL FIELDS REQUIRED", Toast.LENGTH_SHORT).show();
 
-            //}
-  //      });
+            }
+        });
     }
 }
